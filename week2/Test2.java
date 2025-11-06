@@ -65,18 +65,16 @@ public class Test2 {
                 System.out.println(" No valid student data found.");
                 return;
             }
-
-            // Sort students by total (highest to lowest)
+            
             students.sort((a, b) -> b.total - a.total);
 
-            // Compute class average
             double classTotal = 0;
             for (Student s : students) {
                 classTotal += s.average;
             }
             double classAverage = classTotal / students.size();
 
-            // Write output file
+            
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(outputFile))) {
                 bw.write("Name,Total,Average,Result,Remarks\n");
 
