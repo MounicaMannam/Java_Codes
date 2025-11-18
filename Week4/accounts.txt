@@ -1,0 +1,2 @@
+SavingsAccount,Alice,1500.0
+CheckingAccount,Bob,500.0
